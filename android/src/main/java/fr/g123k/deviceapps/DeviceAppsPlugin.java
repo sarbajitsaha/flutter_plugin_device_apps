@@ -252,7 +252,7 @@ public class DeviceAppsPlugin implements
         map.put(AppDataConstants.INSTALL_TIME, pInfo.firstInstallTime);
         map.put(AppDataConstants.UPDATE_TIME, pInfo.lastUpdateTime);
         map.put(AppDataConstants.IS_ENABLED, applicationInfo.enabled);
-        map.puts(AppDataConstants.APP_SIZE, File(applicationInfo.sourceDir).length() + File(applicationInfo.dataDir).length())
+        map.puts(AppDataConstants.APP_SIZE, File(applicationInfo.sourceDir).length() + File(applicationInfo.dataDir).length()
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             map.put(AppDataConstants.CATEGORY, pInfo.applicationInfo.category);
