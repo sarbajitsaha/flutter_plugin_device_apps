@@ -182,6 +182,9 @@ class Application extends _BaseApplication {
   /// or disabled (installed, but not visible)
   final bool enabled;
 
+  ///Total size
+  final int totalSize;
+
   factory Application._(Map<Object, Object> map) {
     if (map == null || map.length == 0) {
       throw Exception('The map can not be null!');
@@ -203,6 +206,7 @@ class Application extends _BaseApplication {
         assert(map['system_app'] != null),
         assert(map['install_time'] != null),
         assert(map['update_time'] != null),
+        assert(map['app_size'] != null),
         appName = map['app_name'],
         apkFilePath = map['apk_file_path'],
         versionName = map['version_name'],
@@ -213,6 +217,7 @@ class Application extends _BaseApplication {
         updateTimeMillis = map['update_time'],
         enabled = map['is_enabled'],
         category = _parseCategory(map['category']),
+        totalSize = map['app_size'],
         super._fromMap(map);
 
   /// Mapping of Android categories
